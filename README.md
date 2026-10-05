@@ -1,14 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Happy Birthday Ayang 💙</title>
 
-    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
@@ -25,153 +24,19 @@
 
         body {
             font-family: "DM Sans", sans-serif;
-            background:
-                linear-gradient(
-                    180deg,
-                    #bfe4ff 0%,
-                    #eaf7ff 28%,
-                    #ffffff 55%,
-                    #e8f4ff 100%
-                );
-            color: #23415f;
+            color: #31506a;
+            background: #f4fbff;
             overflow-x: hidden;
         }
 
-        /* =========================
-           BACKGROUND
-        ========================= */
-
-        .background {
-            position: fixed;
-            inset: 0;
-            overflow: hidden;
-            pointer-events: none;
-            z-index: -1;
+        section {
+            padding: 80px 20px;
         }
 
-        .cloud {
-            position: absolute;
-            background: rgba(255,255,255,.8);
-            border-radius: 100px;
-            filter: blur(1px);
-        }
-
-        .cloud::before,
-        .cloud::after {
-            content: "";
-            position: absolute;
-            background: inherit;
-            border-radius: 50%;
-        }
-
-        .cloud::before {
-            width: 80px;
-            height: 80px;
-            left: 35px;
-            bottom: 0;
-        }
-
-        .cloud::after {
-            width: 60px;
-            height: 60px;
-            left: 90px;
-            bottom: 0;
-        }
-
-        .cloud1 {
-            width: 170px;
-            height: 45px;
-            top: 12%;
-            left: -30px;
-        }
-
-        .cloud2 {
-            width: 200px;
-            height: 50px;
-            top: 38%;
-            right: -50px;
-        }
-
-        .cloud3 {
-            width: 160px;
-            height: 40px;
-            bottom: 15%;
-            left: 10%;
-        }
-
-        /* =========================
-           FLOATING DECORATION
-        ========================= */
-
-        .floating {
-            position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .heart1 {
-            left: 7%;
-            top: 30%;
-            font-size: 22px;
-        }
-
-        .heart2 {
-            right: 8%;
-            top: 20%;
-            font-size: 27px;
-            animation-delay: 1s;
-        }
-
-        .heart3 {
-            right: 15%;
-            bottom: 25%;
-            font-size: 18px;
-            animation-delay: 2s;
-        }
-
-        @keyframes float {
-
-            0%,100% {
-                transform: translateY(0) rotate(-5deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(8deg);
-            }
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            position: fixed;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 30px);
-            max-width: 900px;
-            padding: 12px 18px;
-            border-radius: 50px;
-            background: rgba(255,255,255,.75);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 10px 30px rgba(47,110,165,.15);
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            gap: 22px;
-        }
-
-        nav a {
-            color: #32658e;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: #e18fa9;
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: auto;
         }
 
         /* =========================
@@ -180,478 +45,488 @@
 
         .hero {
             min-height: 100vh;
-            padding: 120px 20px 70px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 15% 20%,
+                rgba(255,255,255,.9) 0 50px,
+                transparent 51px),
+
+                radial-gradient(circle at 85% 25%,
+                rgba(255,255,255,.8) 0 70px,
+                transparent 71px),
+
+                linear-gradient(
+                    145deg,
+                    #bfe8ff,
+                    #76c4f1,
+                    #d9f3ff
+                );
         }
 
         .hero-content {
-            max-width: 850px;
+            position: relative;
+            z-index: 5;
+            max-width: 750px;
         }
 
-        .small-label {
-            color: #588ab2;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            margin-bottom: 18px;
+        .small-title {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.85);
+            color: #277db5;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         .hero h1 {
             font-family: "Baloo 2", sans-serif;
-            font-size: clamp(50px, 13vw, 105px);
-            line-height: .9;
-            color: #2d78b5;
-            font-weight: 800;
-            text-shadow: 4px 5px 0 rgba(255,255,255,.9);
-        }
-
-        .hero .ayang {
-            font-family: "Pacifico", cursive;
-            font-size: clamp(70px, 18vw, 160px);
-            color: #e294ad;
-            line-height: 1;
-            margin-top: 8px;
-            text-shadow:
-                3px 4px 0 white,
-                0 10px 30px rgba(226,148,173,.25);
-        }
-
-        .hero-name {
-            margin-top: 25px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: #315b7d;
-        }
-
-        .hero-text {
-            max-width: 600px;
-            margin: 18px auto;
-            line-height: 1.8;
-            color: #5b7690;
-        }
-
-        .from {
-            font-family: "Pacifico", cursive;
-            color: #4c83ad;
-            font-size: 24px;
-            margin-top: 18px;
-        }
-
-        .main-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 28px;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #4b96ce, #76b9e7);
+            font-size: clamp(55px, 15vw, 115px);
+            line-height: .8;
             color: white;
-            text-decoration: none;
-            font-weight: 700;
-            box-shadow: 0 12px 25px rgba(56,130,184,.25);
-            transition: .3s;
+            margin-top: 30px;
+
+            text-shadow:
+                0 8px 0 rgba(39,125,181,.15),
+                0 10px 30px rgba(39,125,181,.2);
         }
 
-        .main-button:hover {
-            transform: translateY(-5px);
+        .ayang {
+            font-family: "Pacifico", cursive;
+            font-size: clamp(50px, 13vw, 100px);
+            color: white;
+            margin-top: 10px;
+            text-shadow: 0 5px 20px rgba(39,125,181,.25);
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: clamp(18px, 4vw, 25px);
+            letter-spacing: 4px;
+            margin-top: 20px;
+        }
+
+        .hero p {
+            color: white;
+            line-height: 1.8;
+            margin: 25px auto;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 50px;
+            background: white;
+            color: #277db5;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(39,125,181,.2);
+            transition: .3s;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .btn-blue {
+            background: #277db5;
+            color: white;
+        }
+
+        /* FLOATING EMOJI */
+
+        .floating {
+            position: absolute;
+            font-size: 35px;
+            animation: floating 5s infinite ease-in-out;
+        }
+
+        .heart1 {
+            top: 20%;
+            left: 8%;
+        }
+
+        .heart2 {
+            top: 35%;
+            right: 8%;
+            animation-delay: 1s;
+        }
+
+        .heart3 {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .heart4 {
+            bottom: 20%;
+            right: 15%;
+            animation-delay: .5s;
+        }
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+
         }
 
         /* =========================
-           SECTION
+           TITLE
         ========================= */
-
-        section {
-            padding: 90px 18px;
-        }
-
-        .container {
-            width: min(100%, 950px);
-            margin: auto;
-        }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
-        .section-title .emoji {
-            font-size: 35px;
-            margin-bottom: 10px;
+        .section-title small {
+            color: #63aeda;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         .section-title h2 {
             font-family: "Baloo 2", sans-serif;
-            font-size: clamp(35px, 7vw, 55px);
-            color: #3279b1;
+            color: #277db5;
+            font-size: clamp(40px, 9vw, 65px);
             line-height: 1;
+            margin: 10px 0;
         }
 
         .section-title p {
             max-width: 650px;
-            margin: 15px auto 0;
-            color: #69839a;
+            margin: auto;
             line-height: 1.8;
         }
 
         /* =========================
-           5 YEARS CARD
+           5 YEARS
         ========================= */
 
-        .years-card {
+        .years {
             background: white;
-            border-radius: 35px;
-            padding: 50px 25px;
+        }
+
+        .year-card {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 25px;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(61,126,174,.15);
-            border: 3px solid #e4f3ff;
-            position: relative;
-            overflow: hidden;
-        }
+            border-radius: 35px;
 
-        .years-card::before {
-            content: "✦";
-            position: absolute;
-            top: 20px;
-            left: 25px;
-            font-size: 25px;
-            color: #f0b3c5;
-        }
+            background: linear-gradient(
+                135deg,
+                #effaff,
+                white
+            );
 
-        .years-card::after {
-            content: "✦";
-            position: absolute;
-            bottom: 20px;
-            right: 25px;
-            font-size: 25px;
-            color: #78b8e4;
+            box-shadow:
+                0 15px 45px rgba(55,145,198,.1);
         }
 
         .number-five {
             font-family: "Baloo 2", sans-serif;
             font-size: 150px;
+            line-height: .7;
+            color: #65b9ef;
             font-weight: 800;
-            line-height: .8;
-            color: #5aa1d2;
         }
 
-        .five-title {
-            font-family: "Baloo 2", sans-serif;
-            font-size: 28px;
-            color: #e197ae;
-            font-weight: 700;
-            margin-top: 20px;
+        .year-card h3 {
+            color: #4a9dcc;
+            font-size: 22px;
+            margin-top: 25px;
         }
 
         .five-hearts {
+            font-size: 25px;
             margin: 20px 0;
-            letter-spacing: 8px;
-            font-size: 22px;
+            letter-spacing: 5px;
         }
 
-        .years-card p {
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.9;
-            color: #668096;
+        .year-card p {
+            line-height: 2;
         }
 
         /* =========================
-           PHOTO MEMORIES
+           MEMORY
         ========================= */
 
-        .photo-grid {
+        .memories {
+            background: linear-gradient(
+                #ffffff,
+                #eef9ff
+            );
+        }
+
+        .memory-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 20px;
         }
 
-        .photo-card {
+        .memory-card {
             background: white;
-            padding: 12px 12px 22px;
-            border-radius: 8px;
-            box-shadow: 0 15px 35px rgba(46,106,153,.18);
-            transition: .4s;
-        }
-
-        .photo-card:nth-child(1) {
-            transform: rotate(-3deg);
-        }
-
-        .photo-card:nth-child(2) {
-            transform: rotate(2deg);
-        }
-
-        .photo-card:nth-child(3) {
-            transform: rotate(-2deg);
-        }
-
-        .photo-card:nth-child(4) {
-            transform: rotate(2deg);
-        }
-
-        .photo-card:nth-child(5) {
-            transform: rotate(-2deg);
-        }
-
-        .photo-card:nth-child(6) {
-            transform: rotate(3deg);
-        }
-
-        .photo-card:hover {
-            transform: translateY(-10px) rotate(0deg) scale(1.03);
-            z-index: 5;
-        }
-
-        .photo-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 5px;
-            display: block;
-        }
-
-        .photo-caption {
+            padding: 30px 20px;
+            border-radius: 28px;
             text-align: center;
-            padding-top: 15px;
+
+            box-shadow:
+                0 12px 30px rgba(50,100,130,.12);
+
+            transition: .3s;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .memory-icon {
+            width: 85px;
+            height: 85px;
+            margin: auto auto 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            background: #eaf7ff;
+
+            font-size: 40px;
+        }
+
+        .memory-card h3 {
             font-family: "Baloo 2", sans-serif;
-            color: #487da5;
-            font-size: 17px;
-            font-weight: 600;
+            font-size: 25px;
+            color: #4b9dce;
+            margin-bottom: 10px;
+        }
+
+        .memory-card p {
+            line-height: 1.8;
+            font-size: 14px;
         }
 
         /* =========================
            MESSAGE
         ========================= */
 
-        .message-card {
+        .message {
+            background: #f8fcff;
+        }
+
+        .message-box {
+            max-width: 820px;
+            margin: auto;
             background: white;
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(56,116,158,.13);
-            border-left: 7px solid #77b8df;
+            padding: 40px 30px;
+            border-radius: 35px;
+
+            box-shadow:
+                0 15px 50px rgba(40,120,170,.1);
         }
 
-        .message-card p {
-            color: #5f768b;
+        .message-box p {
             line-height: 2;
-            margin-bottom: 25px;
-            font-size: 15px;
+            margin-bottom: 18px;
         }
 
-        .message-card p:last-child {
-            margin-bottom: 0;
+        .signature {
+            font-family: "Pacifico", cursive;
+            color: #5ca8d8;
+            font-size: 25px;
+            text-align: right;
+            margin-top: 30px;
         }
 
         /* =========================
-           BIRTHDAY PARTY
+           PARTY
         ========================= */
 
         .party {
-            background:
-                linear-gradient(
-                    135deg,
-                    #d7efff,
-                    #ffffff,
-                    #fce8ef
-                );
-            border-radius: 40px;
-            padding: 55px 25px;
+            background: linear-gradient(
+                145deg,
+                #7bc7f4,
+                #b9e5ff
+            );
+
             text-align: center;
-            box-shadow: 0 20px 60px rgba(64,127,173,.15);
         }
 
-        .balloons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
+        .party .section-title h2,
+        .party .section-title p {
+            color: white;
         }
 
-        .balloon {
-            width: 58px;
-            height: 72px;
-            border-radius: 50%;
-            position: relative;
+        .party-box {
+            max-width: 700px;
+            margin: auto;
+            padding: 45px 20px;
+
+            background: rgba(255,255,255,.88);
+
+            border-radius: 40px;
+
             box-shadow:
-                inset -8px -10px 15px rgba(0,0,0,.12),
-                inset 8px 7px 12px rgba(255,255,255,.55),
-                0 10px 20px rgba(0,0,0,.12);
-            animation: balloonFloat 3s ease-in-out infinite;
+                0 20px 50px rgba(39,125,181,.18);
         }
 
-        .balloon:nth-child(2) {
-            animation-delay: .4s;
-        }
-
-        .balloon:nth-child(3) {
-            animation-delay: .8s;
-        }
-
-        .balloon:nth-child(4) {
-            animation-delay: 1.2s;
-        }
-
-        .balloon::after {
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 65px;
-            background: #7393ac;
-            left: 50%;
-            top: 70px;
-        }
-
-        .b-blue {
-            background: linear-gradient(135deg,#9bd5fa,#4388c0);
-        }
-
-        .b-pink {
-            background: linear-gradient(135deg,#f8cbd8,#db8fa9);
-        }
-
-        .b-white {
-            background: linear-gradient(135deg,#ffffff,#c9e0ef);
-        }
-
-        .b-purple {
-            background: linear-gradient(135deg,#d9c8f4,#9b81ca);
-        }
-
-        @keyframes balloonFloat {
-            0%,100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        /* =========================
-           CAKE
-        ========================= */
+        /* CAKE */
 
         .cake {
-            width: 260px;
-            height: 190px;
-            margin: 60px auto 35px;
+            width: 210px;
+            height: 160px;
             position: relative;
+            margin: 30px auto;
         }
 
-        .cake-base {
+        .cake-body {
             position: absolute;
-            width: 230px;
-            height: 105px;
+            width: 190px;
+            height: 85px;
+            left: 10px;
             bottom: 0;
-            left: 15px;
+
             background: linear-gradient(
-                135deg,
-                #ffffff,
-                #d6edff
+                #f8c5d4,
+                #ef9eb9
             );
-            border-radius: 20px 20px 30px 30px;
-            box-shadow: 0 20px 35px rgba(40,94,133,.2);
+
+            border-radius: 15px 15px 25px 25px;
+
+            box-shadow:
+                0 8px 0 #df7e9e;
         }
 
         .cake-top {
             position: absolute;
-            width: 230px;
-            height: 65px;
-            left: 15px;
-            top: 25px;
+            width: 155px;
+            height: 45px;
+            left: 28px;
+            top: 40px;
+
+            background: #fff0f5;
             border-radius: 50%;
-            background: #ffffff;
-            box-shadow: 0 8px 20px rgba(53,108,147,.15);
-            z-index: 2;
-        }
-
-        .cake-blue-line {
-            position: absolute;
-            width: 230px;
-            height: 18px;
-            left: 15px;
-            top: 83px;
-            background: #65a8d7;
-            z-index: 3;
-        }
-
-        .cake-writing {
-            position: absolute;
-            z-index: 5;
-            top: 44px;
-            width: 100%;
-            text-align: center;
-            font-family: "Pacifico", cursive;
-            font-size: 17px;
-            color: #3478ad;
         }
 
         .candle {
             position: absolute;
-            width: 10px;
-            height: 48px;
-            background: linear-gradient(
-                90deg,
-                #5f9fd0,
-                #ffffff,
-                #6aa8d5
+            width: 13px;
+            height: 45px;
+            bottom: 85px;
+
+            background: repeating-linear-gradient(
+                45deg,
+                white 0 6px,
+                #74bced 6px 12px
             );
-            top: -18px;
-            z-index: 10;
+
             border-radius: 5px;
+            z-index: 3;
         }
 
         .candle1 {
-            left: 95px;
+            left: 60px;
         }
 
         .candle2 {
-            left: 125px;
+            left: 99px;
+        }
+
+        .candle3 {
+            left: 138px;
         }
 
         .flame {
             width: 16px;
             height: 22px;
             position: absolute;
-            top: -22px;
-            left: -3px;
-            background: #ffd875;
-            border-radius: 50% 50% 50% 0;
-            transform: rotate(-45deg);
-            box-shadow: 0 0 20px #ffd46d;
-            animation: flame 1s ease-in-out infinite alternate;
+            top: -20px;
+            left: -2px;
+
+            background: #ffd45c;
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 18px #ffd45c;
+
+            animation: flame .7s infinite alternate;
         }
 
         @keyframes flame {
+
             from {
-                transform: rotate(-45deg) scale(1);
+                transform: scale(.8);
             }
+
             to {
-                transform: rotate(-45deg) scale(1.15);
+                transform: scale(1);
             }
+
+        }
+
+        .blown .flame {
+            display: none;
+        }
+
+        .party-box h3 {
+            font-family: "Baloo 2", sans-serif;
+            color: #4b9dce;
+            font-size: 30px;
+        }
+
+        .party-box p {
+            line-height: 1.8;
+            margin: 10px auto 25px;
         }
 
         /* =========================
            WISH
         ========================= */
 
-        .wish-card {
-            background: linear-gradient(135deg,#5fa6d6,#8cc9ed);
-            color: white;
-            border-radius: 35px;
-            padding: 45px 30px;
-            box-shadow: 0 20px 60px rgba(49,121,172,.25);
+        .wishes {
+            background: white;
         }
 
-        .wish-card p {
-            line-height: 2;
-            margin-bottom: 25px;
-            font-size: 15px;
+        .wish-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
         }
 
-        .wish-card p:last-child {
-            margin-bottom: 0;
+        .wish {
+            padding: 25px;
+            border-radius: 25px;
+
+            background: #f2faff;
+            border: 1px solid #d8effd;
+
+            line-height: 1.8;
+        }
+
+        .wish strong {
+            display: block;
+            color: #4b9dce;
+            margin-bottom: 8px;
+            font-size: 17px;
         }
 
         /* =========================
@@ -659,60 +534,47 @@
         ========================= */
 
         .final {
+            min-height: 85vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             text-align: center;
-            padding: 120px 20px;
+
+            background:
+                linear-gradient(
+                    160deg,
+                    #5baee1,
+                    #a9defd 60%,
+                    #f4c7d5
+                );
+
+            color: white;
         }
 
         .final h2 {
             font-family: "Baloo 2", sans-serif;
-            font-size: clamp(45px,10vw,85px);
-            line-height: 1;
-            color: #367eb5;
+            font-size: clamp(50px, 12vw, 90px);
+            line-height: .9;
+        }
+
+        .final .love {
+            font-family: "Pacifico", cursive;
+            font-size: clamp(25px, 6vw, 40px);
+            margin: 25px 0;
         }
 
         .final p {
-            max-width: 650px;
-            margin: 25px auto;
-            line-height: 1.9;
-            color: #637c91;
-        }
-
-        .final-highlight {
-            font-family: "Pacifico", cursive;
-            font-size: clamp(28px,6vw,45px);
-            color: #df94ab;
-            margin-top: 30px;
-        }
-
-        .signature {
-            font-family: "Pacifico", cursive;
-            font-size: 38px;
-            color: #4385b4;
-            margin-top: 30px;
+            line-height: 1.8;
         }
 
         footer {
+            background: #367fae;
+            color: #eaf7ff;
             text-align: center;
-            padding: 25px;
-            background: #3279ae;
-            color: white;
-            font-size: 11px;
-            letter-spacing: 2px;
-        }
-
-        /* =========================
-           REVEAL
-        ========================= */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: 1s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            padding: 25px 15px;
+            font-size: 13px;
         }
 
         /* =========================
@@ -721,158 +583,87 @@
 
         .confetti {
             position: fixed;
-            width: 9px;
-            height: 15px;
             top: -20px;
+
+            width: 8px;
+            height: 14px;
+
             z-index: 999;
-            pointer-events: none;
-            animation: fall 3s linear forwards;
+
+            animation:
+                fall 3.5s linear forwards;
         }
 
         @keyframes fall {
-            0% {
-                transform: translateY(0) rotate(0);
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
             }
 
-            100% {
-                transform: translateY(110vh) rotate(720deg);
-            }
         }
 
         /* =========================
-           RESPONSIVE
+           MOBILE
         ========================= */
 
-        @media (max-width: 700px) {
-
-            nav {
-                gap: 12px;
-                padding: 11px 10px;
-            }
-
-            nav a {
-                font-size: 9px;
-            }
-
-            .hero {
-                padding-top: 120px;
-            }
-
-            .hero-name {
-                font-size: 14px;
-                letter-spacing: 2px;
-            }
-
-            .hero-text {
-                font-size: 13px;
-            }
+        @media(max-width:700px) {
 
             section {
                 padding: 65px 15px;
             }
 
-            .photo-grid {
-                grid-template-columns: repeat(2,1fr);
-                gap: 18px;
+            .memory-grid {
+                grid-template-columns: 1fr;
             }
 
-            .photo-card img {
-                height: 190px;
-            }
-
-            .message-card {
-                padding: 25px 20px;
-            }
-
-            .message-card p,
-            .wish-card p {
-                font-size: 13px;
-                line-height: 1.9;
-            }
-
-            .balloon {
-                width: 45px;
-                height: 60px;
-            }
-
-            .cake {
-                transform: scale(.85);
-            }
-        }
-
-        @media (max-width: 420px) {
-
-            nav a:nth-child(n+5) {
-                display: none;
-            }
-
-            .photo-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .photo-card img {
-                height: 160px;
+            .wish-grid {
+                grid-template-columns: 1fr;
             }
 
             .number-five {
                 font-size: 120px;
             }
+
+            .message-box {
+                padding: 30px 20px;
+            }
+
+            .floating {
+                font-size: 25px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
 
 <!-- =========================
-     BACKGROUND
+     HALAMAN PEMBUKA
 ========================= -->
 
-<div class="background">
+<section class="hero">
 
-    <div class="cloud cloud1"></div>
-    <div class="cloud cloud2"></div>
-    <div class="cloud cloud3"></div>
-
-</div>
-
-<div class="floating heart1">💙</div>
-<div class="floating heart2">✨</div>
-<div class="floating heart3">💗</div>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<nav>
-
-    <a href="#home">🏠 Home</a>
-    <a href="#journey">💙 5 Tahun</a>
-    <a href="#memories">📸 Foto</a>
-    <a href="#message">💌 Pesan</a>
-    <a href="#birthday">🎂 Birthday</a>
-    <a href="#wish">✨ Doa</a>
-
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
+    <span class="floating heart1">💙</span>
+    <span class="floating heart2">🎈</span>
+    <span class="floating heart3">✨</span>
+    <span class="floating heart4">🤍</span>
 
     <div class="hero-content">
 
-        <div class="small-label">
-            ✨ A SPECIAL DAY FOR SOMEONE SPECIAL ✨
+        <div class="small-title">
+            A SPECIAL DAY FOR SOMEONE SPECIAL ✨
         </div>
 
         <h1>
-            HAPPY
-            <br>
+            HAPPY<br>
             BIRTHDAY
         </h1>
 
@@ -880,22 +671,18 @@
             Ayang 💙
         </div>
 
-        <div class="hero-name">
+        <h2>
             MUH. TIO SUSANTO
-        </div>
+        </h2>
 
-        <p class="hero-text">
-            Untuk seseorang yang sudah menemani Tyara
-            selama kurang lebih 5 tahun.
-            Hari ini bukan cuma tentang bertambahnya usia,
-            tapi juga tentang merayakan seseorang yang begitu berarti.
+        <p>
+            Hari ini adalah hari spesial untuk seseorang
+            yang sudah menjadi bagian penting dalam perjalanan
+            hidup Tyara.
+            Selamat ulang tahun, Ayang! 💙
         </p>
 
-        <div class="from">
-            From Tyara, with lots of love 💙
-        </div>
-
-        <a href="#journey" class="main-button">
+        <a href="#message" class="btn">
             💌 Buka Pesan dari Tyara
         </a>
 
@@ -904,54 +691,67 @@
 </section>
 
 
+
 <!-- =========================
-     5 YEARS
+     5 TAHUN BERSAMA
 ========================= -->
 
-<section id="journey">
+<section class="years">
 
     <div class="container">
 
-        <div class="section-title reveal">
+        <div class="section-title">
 
-            <div class="emoji">💙✨</div>
+            <small>
+                OUR STORY
+            </small>
 
             <h2>
-                Our 5 Year Journey
+                5 Years of Us 💙
             </h2>
 
             <p>
-                Lima tahun bukan hanya tentang waktu,
-                tetapi tentang semua cerita yang sudah kita lewati.
+                Lima tahun bukan waktu yang sebentar.
+                Ada banyak cerita, tawa, perjuangan,
+                kesabaran, dan kenangan yang sudah kita
+                lewati bersama.
             </p>
 
         </div>
 
 
-        <div class="years-card reveal">
+        <div class="year-card">
 
             <div class="number-five">
                 5
             </div>
 
-            <div class="five-title">
+            <h3>
                 TAHUN BERSAMA
-            </div>
+            </h3>
 
             <div class="five-hearts">
                 💙 💙 💙 💙 💙
             </div>
 
             <p>
-                5 tahun bukan waktu yang sebentar.
-                Ada banyak cerita, tawa, momen bahagia,
-                salah paham, perjuangan, dan kenangan yang
-                sudah kita lewati bersama.
-            </p>
+                Dari hari-hari sederhana sampai momen
+                yang tidak akan pernah terlupakan,
+                terima kasih karena sudah menjadi bagian
+                dari perjalanan Tyara.
 
-            <p style="margin-top:20px;">
-                Dan semoga masih banyak cerita yang
-                menunggu kita di depan. ✨
+                <br><br>
+
+                Lima tahun penuh cerita.
+                Lima tahun penuh pembelajaran.
+                Lima tahun dengan banyak sekali
+                kenangan yang akan selalu punya tempat
+                spesial di hati.
+
+                <br><br>
+
+                Semoga cerita kita terus bertambah,
+                satu halaman demi satu halaman. 🥹
             </p>
 
         </div>
@@ -961,236 +761,236 @@
 </section>
 
 
+
 <!-- =========================
-     MEMORIES
+     CERITA
 ========================= -->
 
-<section id="memories">
+<section class="memories">
 
     <div class="container">
 
-        <div class="section-title reveal">
+        <div class="section-title">
 
-            <div class="emoji">
-                📸💙
-            </div>
+            <small>
+                OUR LITTLE MEMORIES
+            </small>
 
             <h2>
-                Our Little Memories
+                Potongan Cerita Kita ✨
             </h2>
 
             <p>
-                Beberapa momen kecil yang menjadi bagian
-                dari perjalanan panjang kita.
+                Tidak semua kenangan harus disimpan
+                dalam sebuah foto.
+                Ada beberapa cerita yang cukup
+                disimpan di hati.
             </p>
 
         </div>
 
 
-        <div class="photo-grid">
+        <div class="memory-grid">
 
 
-            <!-- FOTO 1 -->
+            <div class="memory-card">
 
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto1.jpg"
-                    alt="Kenangan Tyara dan Ayang"
-                >
-
-                <div class="photo-caption">
-                    Our little moment 💙
+                <div class="memory-icon">
+                    🥰
                 </div>
 
-            </div>
-
-
-            <!-- FOTO 2 -->
-
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto2.jpg"
-                    alt="Kenangan bersama"
-                >
-
-                <div class="photo-caption">
-                    Favorite memory ✨
-                </div>
-
-            </div>
-
-
-            <!-- FOTO 3 -->
-
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto3.jpg"
-                    alt="Kenangan perjalanan"
-                >
-
-                <div class="photo-caption">
-                    Another beautiful day 🤍
-                </div>
-
-            </div>
-
-
-            <!-- FOTO 4 -->
-
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto4.jpg"
-                    alt="Momen bersama"
-                >
-
-                <div class="photo-caption">
-                    Just us 💙
-                </div>
-
-            </div>
-
-
-            <!-- FOTO 5 -->
-
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto5.jpg"
-                    alt="Kenangan 5 tahun"
-                >
-
-                <div class="photo-caption">
-                    5 years of stories 🥹
-                </div>
-
-            </div>
-
-
-            <!-- FOTO 6 -->
-
-            <div class="photo-card reveal">
-
-                <img
-                    src="images/foto6.jpg"
-                    alt="Foto favorit"
-                >
-
-                <div class="photo-caption">
-                    One of my favorites 💗
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MESSAGE
-========================= -->
-
-<section id="message">
-
-    <div class="container">
-
-        <div class="section-title reveal">
-
-            <div class="emoji">
-                💌
-            </div>
-
-            <h2>
-                A Little Message For You
-            </h2>
-
-        </div>
-
-
-        <div class="message-card reveal">
-
-            <p>
-                Terima kasih sudah menemani Tyara dalam jangka
-                waktu yang lumayan lama, yaitu kurang lebih 5 tahun.
-            </p>
-
-            <p>
-                Lima tahun bukan waktu yang sebentar. Selama itu,
-                pasti ada banyak cerita, tawa, kebahagiaan, bahkan
-                mungkin ada juga salah paham, kecewa, dan masa-masa
-                sulit yang sudah kita lewati bersama.
-            </p>
-
-            <p>
-                Terima kasih karena selama ini Ayang sudah tetap ada,
-                sudah meluangkan waktu, memberikan perhatian,
-                mendengarkan cerita Tyara, dan menjadi bagian dari
-                begitu banyak momen dalam hidup Tyara.
-            </p>
-
-            <p>
-                Mungkin Tyara nggak selalu bisa mengungkapkan
-                semuanya lewat kata-kata, tapi Tyara benar-benar
-                menghargai setiap waktu, usaha, perhatian, kesabaran,
-                dan kebersamaan yang sudah Ayang berikan selama
-                5 tahun ini.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     BIRTHDAY PARTY
-========================= -->
-
-<section id="birthday">
-
-    <div class="container">
-
-        <div class="party reveal">
-
-            <div class="balloons">
-
-                <div class="balloon b-blue"></div>
-                <div class="balloon b-pink"></div>
-                <div class="balloon b-white"></div>
-                <div class="balloon b-purple"></div>
-
-            </div>
-
-
-            <div class="section-title">
-
-                <div class="emoji">
-                    🎂🎉
-                </div>
-
-                <h2>
-                    Make A Wish, Ayang!
-                </h2>
+                <h3>
+                    Awal Cerita
+                </h3>
 
                 <p>
-                    Hari ini waktunya Ayang tersenyum,
-                    meniup lilin, dan membuat banyak harapan baru.
+                    Dari awal mengenal sampai akhirnya
+                    kita berjalan bersama.
+
+                    Semua yang terjadi menjadi bagian
+                    dari cerita yang tidak akan pernah
+                    Tyara lupakan.
                 </p>
 
             </div>
 
 
-            <!-- CAKE -->
 
-            <div class="cake">
+            <div class="memory-card">
+
+                <div class="memory-icon">
+                    😂
+                </div>
+
+                <h3>
+                    Tawa Kita
+                </h3>
+
+                <p>
+                    Ada banyak momen sederhana yang
+                    mungkin terlihat biasa.
+
+                    Tetapi justru hal-hal kecil itulah
+                    yang sering menjadi kenangan
+                    paling menyenangkan.
+                </p>
+
+            </div>
+
+
+
+            <div class="memory-card">
+
+                <div class="memory-icon">
+                    🤍
+                </div>
+
+                <h3>
+                    Perjalanan Kita
+                </h3>
+
+                <p>
+                    Lima tahun mengajarkan kita tentang
+                    sabar, memahami, saling mendukung,
+                    dan tetap memilih satu sama lain.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PESAN TYARA
+========================= -->
+
+<section class="message" id="message">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                FROM TYARA
+            </small>
+
+            <h2>
+                A Little Message 💌
+            </h2>
+
+        </div>
+
+
+        <div class="message-box">
+
+            <p>
+                Happy birthday, Ayang. 💙
+            </p>
+
+            <p>
+                Hari ini Tyara cuma ingin bilang terima kasih
+                karena selama lima tahun ini kamu sudah hadir
+                dan menjadi salah satu bagian paling berarti
+                dalam perjalanan hidup Tyara.
+            </p>
+
+            <p>
+                Terima kasih untuk semua waktu yang sudah kita
+                lewati bersama. Terima kasih untuk tawa,
+                perhatian, kesabaran, cerita-cerita kecil,
+                dan kenangan yang mungkin terlihat sederhana
+                tetapi selalu punya tempat spesial di hati Tyara.
+            </p>
+
+            <p>
+                Kita mungkin tidak selalu punya hari yang sempurna.
+                Ada salah paham, ada perbedaan, ada hari ketika
+                semuanya terasa berat.
+            </p>
+
+            <p>
+                Tapi dari semua itu, Tyara belajar bahwa sebuah
+                hubungan bukan tentang selalu sempurna.
+                Hubungan adalah tentang dua orang yang terus
+                belajar memahami, saling menguatkan, dan tetap
+                memilih untuk berjalan bersama.
+            </p>
+
+            <p>
+                Terima kasih sudah menjadi seseorang yang menemani
+                perjalanan Tyara sampai sejauh ini.
+                Lima tahun bersama bukan hanya tentang lamanya
+                waktu, tetapi tentang banyaknya cerita yang sudah
+                kita lewati.
+            </p>
+
+            <p>
+                Semoga di umur yang baru ini kamu semakin bahagia,
+                semakin kuat, semakin sukses, dan semua hal baik
+                yang kamu impikan perlahan menemukan jalannya.
+            </p>
+
+            <p>
+                Jangan lupa untuk selalu menjaga diri.
+                Jangan terlalu keras kepada diri sendiri.
+                Dan jangan pernah lupa bahwa kamu layak mendapatkan
+                hal-hal baik dalam hidup.
+            </p>
+
+            <p>
+                Sekali lagi, selamat ulang tahun, Ayang.
+                Semoga hari ini menjadi salah satu hari yang
+                paling bahagia untukmu. 💙
+            </p>
+
+
+            <div class="signature">
+                Love, Tyara 💙
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     KUE ULANG TAHUN
+========================= -->
+
+<section class="party">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small style="color:white;">
+                BIRTHDAY PARTY
+            </small>
+
+            <h2>
+                Make A Wish! 🎂
+            </h2>
+
+            <p>
+                Karena ulang tahun Ayang harus dirayakan
+                dengan senyum, doa, dan sedikit kejutan. 🎉
+            </p>
+
+        </div>
+
+
+        <div class="party-box">
+
+            <div class="cake" id="cake">
 
                 <div class="candle candle1">
                     <div class="flame"></div>
@@ -1200,25 +1000,34 @@
                     <div class="flame"></div>
                 </div>
 
+                <div class="candle candle3">
+                    <div class="flame"></div>
+                </div>
+
                 <div class="cake-top"></div>
 
-                <div class="cake-base"></div>
-
-                <div class="cake-blue-line"></div>
-
-                <div class="cake-writing">
-                    Happy Birthday Ayang
-                </div>
+                <div class="cake-body"></div>
 
             </div>
 
 
+            <h3>
+                Happy Birthday, Ayang! 💙
+            </h3>
+
+            <p>
+                Pejamkan mata,
+                buat satu permohonan,
+                lalu tiup lilinnya! ✨
+            </p>
+
             <button
-                class="main-button"
-                onclick="birthdaySurprise()"
-                style="border:none; cursor:pointer;"
-            >
+                class="btn btn-blue"
+                id="blowButton"
+                onclick="blowCandles()">
+
                 🎉 TIUP LILIN
+
             </button>
 
         </div>
@@ -1228,49 +1037,114 @@
 </section>
 
 
+
 <!-- =========================
-     WISH
+     DOA
 ========================= -->
 
-<section id="wish">
+<section class="wishes">
 
     <div class="container">
 
-        <div class="section-title reveal">
+        <div class="section-title">
 
-            <div class="emoji">
-                ✨🤍
-            </div>
+            <small>
+                MY WISH FOR YOU
+            </small>
 
             <h2>
-                My Wish For You
+                Doa Tyara untuk Ayang ✨
             </h2>
 
         </div>
 
 
-        <div class="wish-card reveal">
+        <div class="wish-grid">
 
-            <p>
-                Di hari ulang tahun Ayang ini, Tyara cuma ingin
-                mendoakan semoga Ayang selalu diberikan kesehatan,
-                kebahagiaan, kesuksesan, rezeki yang luas, umur yang
-                panjang, dan kekuatan untuk mencapai semua impian
-                yang Ayang punya.
-            </p>
 
-            <p>
-                Semoga setiap langkah Ayang selalu dimudahkan,
-                setiap usaha Ayang diberikan hasil yang baik,
-                dan semua hal yang sedang Ayang perjuangkan
-                perlahan bisa menjadi kenyataan.
-            </p>
+            <div class="wish">
 
-            <p>
-                Semoga di usia yang baru ini, hidup Ayang dipenuhi
-                lebih banyak kebahagiaan, keberkahan, kesuksesan,
-                dan hal-hal baik yang bahkan belum pernah Ayang bayangkan.
-            </p>
+                <strong>
+                    💙 Kebahagiaan
+                </strong>
+
+                Semoga kamu selalu dikelilingi
+                orang-orang yang tulus menyayangi,
+                mendukung, dan menghargai kamu.
+
+            </div>
+
+
+
+            <div class="wish">
+
+                <strong>
+                    🌟 Kesuksesan
+                </strong>
+
+                Semoga setiap usaha, cita-cita,
+                dan langkahmu dipermudah dan
+                membawa hasil terbaik.
+
+            </div>
+
+
+
+            <div class="wish">
+
+                <strong>
+                    🌿 Kesehatan
+                </strong>
+
+                Semoga kamu selalu diberikan
+                kesehatan, kekuatan, umur panjang,
+                dan tubuh yang selalu kuat.
+
+            </div>
+
+
+
+            <div class="wish">
+
+                <strong>
+                    🙏 Ketenangan
+                </strong>
+
+                Semoga hatimu selalu diberikan
+                ketenangan ketika menghadapi
+                hari-hari yang tidak mudah.
+
+            </div>
+
+
+
+            <div class="wish">
+
+                <strong>
+                    ✨ Impian
+                </strong>
+
+                Semoga satu per satu impianmu
+                bisa terwujud pada waktu yang
+                paling tepat.
+
+            </div>
+
+
+
+            <div class="wish">
+
+                <strong>
+                    🤍 Kita
+                </strong>
+
+                Semoga perjalanan lima tahun ini
+                menjadi awal dari lebih banyak
+                cerita indah yang akan kita jalani
+                bersama.
+
+            </div>
+
 
         </div>
 
@@ -1279,250 +1153,117 @@
 </section>
 
 
-<!-- =========================
-     THANK YOU
-========================= -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-title reveal">
-
-            <div class="emoji">
-                💙
-            </div>
-
-            <h2>
-                Thank You For 5 Years
-            </h2>
-
-        </div>
-
-
-        <div class="message-card reveal">
-
-            <p>
-                Terima kasih sudah menjadi bagian dari perjalanan
-                Tyara selama ini. Terima kasih sudah bertahan,
-                sudah menemani, dan sudah menjadi seseorang yang
-                begitu berarti dalam hidup Tyara.
-            </p>
-
-            <p>
-                Terima kasih sudah hadir dan menemani Tyara sampai
-                sejauh ini. Terima kasih untuk 5 tahun yang penuh cerita.
-            </p>
-
-            <p>
-                Semoga setelah ini masih ada banyak tahun lagi yang
-                bisa kita lewati bersama, menciptakan cerita baru,
-                melewati banyak hal bersama, dan suatu hari nanti
-                melihat kembali perjalanan ini dengan senyum.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
 
 <!-- =========================
-     FINAL
+     PENUTUP
 ========================= -->
 
 <section class="final">
 
-    <div class="container reveal">
+    <div class="container">
 
-        <div style="font-size:40px;">
-            🎈✨🎂✨🎈
+        <div style="font-size:50px;margin-bottom:25px;">
+            🎈 💙 🎂 💙 🎈
         </div>
 
         <h2>
-            SELAMAT ULANG TAHUN,
-            <br>
-            AYANG 💙
+            SELAMAT<br>
+            ULANG TAHUN,<br>
+            AYANG! 💙
         </h2>
 
-        <p>
-            Semoga di usia yang baru ini, Ayang semakin bahagia,
-            semakin sukses, semakin kuat, dan semakin dekat
-            dengan semua impian Ayang.
-        </p>
-
-        <div class="final-highlight">
-            5 years is only the beginning... 💙
+        <div class="love">
+            5 years is only the beginning...
         </div>
 
         <p>
-            Terima kasih sudah menjadi bagian dari cerita
-            Tyara selama 5 tahun ini.
-            Semoga cerita kita belum selesai di sini.
+            Semoga senyum kamu hari ini menjadi awal
+            dari banyak kebahagiaan di hari-hari berikutnya.
         </p>
 
-        <div class="signature">
+        <p>
+            Terima kasih sudah menjadi bagian dari cerita Tyara.
+        </p>
+
+        <p style="
+            margin-top:25px;
+            font-family:'Pacifico';
+            font-size:25px;
+        ">
             With lots and lots of love,
-            <br>
-            Tyara 💙
-        </div>
+            Tyara 🤍
+        </p>
 
     </div>
 
 </section>
 
 
+
 <footer>
 
-    MADE WITH 💙 BY TYARA
-    <br><br>
-    FOR MUH. TIO SUSANTO
+    Made with 💙, memories, prayers & lots of love — Tyara
 
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
 
 <script>
 
+function blowCandles() {
 
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
+    const cake =
+        document.getElementById("cake");
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+    const button =
+        document.getElementById("blowButton");
 
+    cake.classList.add("blown");
 
-    function revealOnScroll() {
+    button.innerHTML =
+        "💙 WISH GRANTED!";
 
-        revealElements.forEach(element => {
+    /* CONFETTI */
 
-            const top =
-                element.getBoundingClientRect().top;
+    for(let i = 0; i < 60; i++) {
 
-            const windowHeight =
-                window.innerHeight;
+        const confetti =
+            document.createElement("span");
 
-            if (top < windowHeight - 80) {
+        confetti.className =
+            "confetti";
 
-                element.classList.add("active");
+        confetti.style.left =
+            Math.random() * 100 + "vw";
 
-            }
+        confetti.style.background =
+            [
+                "#65b9ef",
+                "#f5b8ca",
+                "#e8c878",
+                "#ffffff",
+                "#8fd1f5"
+            ][
+                Math.floor(Math.random() * 5)
+            ];
 
-        });
+        confetti.style.animationDelay =
+            Math.random() * .8 + "s";
 
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        revealOnScroll
-    );
-
-
-    revealOnScroll();
-
-
-
-    /* =========================
-       BIRTHDAY SURPRISE
-    ========================= */
-
-    function birthdaySurprise() {
-
-        const flames =
-            document.querySelectorAll(".flame");
-
-
-        flames.forEach(flame => {
-
-            flame.style.display = "none";
-
-        });
-
-
-        createConfetti();
-
+        document.body.appendChild(confetti);
 
         setTimeout(() => {
 
-            alert(
-                "🎉 YEAY! 🎉\n\n" +
-                "Semoga semua doa dan harapan Ayang " +
-                "di usia yang baru ini bisa terkabul. 💙✨\n\n" +
-                "Happy Birthday, Ayang! 🎂"
-            );
+            confetti.remove();
 
-        }, 700);
+        }, 4500);
 
     }
 
-
-
-    /* =========================
-       CONFETTI
-    ========================= */
-
-    function createConfetti() {
-
-        const colors = [
-            "#5aa8d8",
-            "#8ccbf0",
-            "#e49ab1",
-            "#f4c9d5",
-            "#ffffff",
-            "#f2d48b"
-        ];
-
-
-        for (let i = 0; i < 100; i++) {
-
-            const confetti =
-                document.createElement("div");
-
-            confetti.className =
-                "confetti";
-
-
-            confetti.style.left =
-                Math.random() * 100 + "vw";
-
-
-            confetti.style.background =
-                colors[
-                    Math.floor(
-                        Math.random() *
-                        colors.length
-                    )
-                ];
-
-
-            confetti.style.animationDuration =
-                (Math.random() * 2 + 2) + "s";
-
-
-            confetti.style.transform =
-                `rotate(${Math.random() * 360}deg)`;
-
-
-            document.body.appendChild(confetti);
-
-
-            setTimeout(() => {
-
-                confetti.remove();
-
-            }, 4000);
-
-        }
-
-    }
+}
 
 </script>
+
 
 </body>
 </html>
